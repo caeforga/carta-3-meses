@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#8b2942" />
+    <title>Para Yennifer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Great+Vibes&family=Outfit:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg" aria-hidden="true">
+      <div class="bg__glow bg__glow--one"></div>
+      <div class="bg__glow bg__glow--two"></div>
+      <div class="bg__veil"></div>
+      <div class="petals" id="petals"></div>
+    </div>
+
+    <main class="app">
+      <section class="gate" id="gate" aria-labelledby="gate-title">
+        <div class="gate__card">
+          <p class="gate__eyebrow">Una carta solo para ti</p>
+          <h1 id="gate-title" class="gate__title">Bienvenida Yennifer</h1>
+          <p class="gate__hint">
+            Para abrirla, escribe la fecha en que nos hicimos novios
+          </p>
+
+          <form class="gate__form" id="gate-form" autocomplete="off">
+            <label class="sr-only" for="date-input">Fecha (DD/MM/AAAA)</label>
+            <input
+              id="date-input"
+              class="gate__input"
+              type="text"
+              inputmode="numeric"
+              placeholder="DD/MM/AAAA"
+              maxlength="10"
+              required
+            />
+            <button class="gate__button" type="submit">Abrir carta</button>
+            <p class="gate__error" id="gate-error" role="alert" hidden>
+              Esa no es nuestra fecha… inténtalo de nuevo ♥
+            </p>
+          </form>
+        </div>
+      </section>
+
+      <section class="letter" id="letter" hidden aria-labelledby="letter-title">
+        <article class="letter__paper">
+          <header class="letter__header">
+            <p class="letter__from">Con todo mi cariño</p>
+            <h2 id="letter-title" class="letter__title">Felices tres meses, amor</h2>
+          </header>
+          <p class="letter__body" id="letter-body" aria-live="polite"></p>
+          <p class="letter__sign" id="letter-sign" hidden>— Carlos</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
